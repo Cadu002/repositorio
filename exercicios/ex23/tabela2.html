@@ -13,6 +13,14 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
         }
 
         td,
@@ -21,25 +29,36 @@
             padding: 10px;
         }
 
-        td.nmr{
+        td.nmr {
             text-align: right;
+        }
+
+        thead>tr>th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(60, 60, 60);
         }
 
         thead,
         tfoot {
-            background-color: gray;
+            background-color: rgb(60, 60, 60);
             color: #fff;
         }
 
+        tbody>tr:nth-child(odd) {
+            /*2n -1 ou 2n*/
+            background-color: rgb(171, 234, 238);
+        }
     </style>
 </head>
 
 <body>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>ESTADO</th>
-                <th>População</th>
+                <th scope="col">ESTADO</th> <!--indica que os dados deste título estão na mesma coluna-->
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -55,11 +74,99 @@
                 <td>Rio de Janeiro</td>
                 <td class="nmr">17 264 943</td>
             </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="nmr">12 345 542</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="nmr">43 546 943</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="nmr">134 940 392</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="nmr">34 340 442</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="nmr">111 11 392</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="nmr">11 11 392</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="nmr">244 940 444</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="nmr">222 24 392</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="nmr">324 131 392</td>
+            </tr>
+            <tr>
+                <td>Espirito Santo</td>
+                <td class="nmr">134 266 57</td>
+            </tr>
+            <tr>
+                <td>Rio GRande do Sul</td>
+                <td class="nmr">134 940 392</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="nmr">34 464 392</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="nmr">4 940 44</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="nmr">44 44 392</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="nmr">134 22 392</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="nmr">44 353 392</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="nmr">77 66 392</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="nmr">77 940 66</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="nmr">134 940 646</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="nmr">74 353 392</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="nmr">33 353 392</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="nmr">353 940 392</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td class="nmr"><strong>0000</strong></td>
+                <th scope="row">Total de Habitantes</th> <!--indica que os dados deste título estão na mesma linha-->
+                <td class="nmr"><strong>16378</strong></td>
             </tr>
         </tfoot>
     </table>
